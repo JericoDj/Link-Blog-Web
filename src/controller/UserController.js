@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/users";
+const API_URL = "https://link-api-r0b6.onrender.com/users";
 
 
 export default class UserController {

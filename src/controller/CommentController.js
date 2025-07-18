@@ -1,4 +1,4 @@
-const API = "http://localhost:4000/blogs";
+const API = "https://link-api-r0b6.onrender.com/blogs";
 
 export default class CommentController {
   static async getCommentsByBlogId(blogId) {
