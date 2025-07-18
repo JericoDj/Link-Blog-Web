@@ -1,0 +1,78 @@
+/* AppNavBar.css */
+
+.app-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.brand-logo:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-links .nav-link {
+  margin: 0 10px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #007bff;
+}
+
+.account-btn {
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.account-btn:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+
+
+.coffee-buttons .btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background-color: #0056b3;
+}
+
+.btn-coffee {
+  background-color: #0056b3;
+  color: #fcfcfc !important; /* or use #333 or #2c2c2c for better contrast */
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+
+
+.btn-coffee:hover {
+  background-color: #0056b3 !important;
+  color: #ffffff !important;
+}
+

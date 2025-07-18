@@ -1,0 +1,46 @@
+/* Container styling */
+.admin-dashboard {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Comment Glimpse section */
+.comment-glimpse {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.comment-glimpse li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+/* Modal styling overrides */
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body form {
+  padding: 0.5rem 0;
+}
+
+.modal-body .form-label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.modal-body .form-control {
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+
+.modal-body button {
+  margin-top: 1rem;
+  width: 100%;
+}

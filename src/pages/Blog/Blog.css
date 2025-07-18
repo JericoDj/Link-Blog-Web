@@ -1,0 +1,38 @@
+.blog-hero {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+.blog-card {
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+}

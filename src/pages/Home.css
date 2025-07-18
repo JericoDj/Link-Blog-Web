@@ -1,0 +1,178 @@
+/* src/pages/Home.css */
+
+.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* You can replace this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(16, 24, 32, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #101820;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #eaeaea;
+  color: #000;
+}
+
+
+/* About Section */
+
+.about-section {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+
+
+.features-section {
+  background-color: #ffffff;
+}
+
+.feature-card {
+  background: #f4f4f4;
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: #eaeaea;
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.coffee-buttons .btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background-color: #0056b3;
+}
+
+.btn-coffee {
+  background-color: #0056b3;
+  color: #fcfcfc !important; /* or use #333 or #2c2c2c for better contrast */
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+
+
+.btn-coffee:hover {
+  background-color: #0056b3 !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+.community-section {
+  background: linear-gradient(135deg, #e1ecf4, #ffffff);
+  color: #222;
+}
+
+.community-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.btn-community {
+  background-color: #0056b3 !important;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-community:hover {
+  background-color: #0056b3 !important;
+  color: #009cc7;
+}
+
+

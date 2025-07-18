@@ -1,0 +1,24 @@
+/* LoginModal.css */
+
+.login-modal .modal-content {
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-modal .modal-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.forgot-link,
+.create-link {
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-link:hover,
+.create-link:hover {
+  text-decoration: underline;
+}

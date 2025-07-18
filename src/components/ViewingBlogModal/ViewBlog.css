@@ -1,0 +1,9 @@
+.view-blog-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.comment-box {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+}
