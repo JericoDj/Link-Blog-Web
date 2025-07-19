@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './CreateAccountModal.css';
+import { UserContext } from '../../context/UserContext';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CreateAccountModal({ show, handleClose, setShowLogin }) {
   const [form, setForm] = useState({
@@ -10,17 +13,33 @@ export default function CreateAccountModal({ show, handleClose, setShowLogin }) 
     password: '',
     mobile: '',
   });
+    const { login, register } = useContext(UserContext);
+    const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: send form data to backend or Firebase
-    console.log('Creating account:', form);
-    handleClose();
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log('Creating account:', form);
+
+  try {
+    // Register user
+    await register(form);
+
+    // Immediately login user
+    const { user } = await login(form.email, form.password);
+
+    console.log('Account created & logged in:', user);
+
+    handleClose(); // Close modal
+    navigate('/blog'); // Or redirect elsewhere
+  } catch (error) {
+    console.error('Error during registration/login:', error.message);
+    alert('Failed to create account. Please try again.');
+  }
+};
 
   return (
     <Modal show={show} onHide={handleClose} centered className="create-modal">
@@ -83,7 +102,7 @@ export default function CreateAccountModal({ show, handleClose, setShowLogin }) 
               name="mobile"
               value={form.mobile}
               onChange={handleChange}
-              placeholder="+63 900 000 0000"
+              placeholder="0912 345 6789"
             />
           </Form.Group>
 

@@ -55,23 +55,40 @@ export default function AppNavBar() {
         </a> */}
               </div>
 
-              {user ? (
-                <Button
-                  variant="outline-dark"
-                  className="account-btn"
-                  onClick={() => setShowAccount(true)}
-                >
-                  Account
-                </Button>
-              ) : (
-                <Button
-                  variant="outline-primary"
-                  className="account-btn"
-                  onClick={() => setShowLogin(true)}
-                >
-                  Login
-                </Button>
-              )}
+ {(() => {
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    // Token exists, assume user will be set soon — show "Account"
+    return (
+      <Button
+        variant="outline-dark"
+        className="account-btn"
+        onClick={() => setShowAccount(true)}
+      >
+        Account
+      </Button>
+    );
+  }
+
+  if (user !== undefined && !user) {
+    // No token and user resolved as null — show "Login"
+    return (
+      <Button
+        variant="outline-primary"
+        className="account-btn"
+        onClick={() => setShowLogin(true)}
+      >
+        Login
+      </Button>
+    );
+  }
+
+  // While loading or user is still undefined/null with token, show nothing
+  return null;
+})()}
+
+
             </div>
           </Navbar.Collapse>
         </Container>

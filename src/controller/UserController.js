@@ -48,13 +48,20 @@ export default class UserController {
 
   // Register user
   static async register(userData) {
+    console.log("userData", userData);
     try {
       const response = await fetch(`${API_URL}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify({
+          firstName: userData.firstName,
+          lastName: userData.lastName,
+          email: userData.email,
+          password: userData.password,
+          mobileNo: userData.mobile,
+        }),
       });
 
       const responseData = await response.json();
